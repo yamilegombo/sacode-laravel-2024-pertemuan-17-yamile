@@ -30,9 +30,20 @@ public function stop()
 
 }
 
+class kendaraan extends Mobil {
+    public $jenis;
+
+    public function bergerak()
+    {
+        echo 'kendaraan sedang bergerak';
+
+    }
+}
+
 // Objek
 
 $mobil = new Mobil();
+$kendaraan = new kendaraan();
 $mobil->merk = 'Avanza';
 $mobil->model = 'Nova';
 $mobil->tahun = 2023;
@@ -42,3 +53,9 @@ $mobil->warna = 'putih';
 $ket =' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio aliquam earum vero fuga! Eligendi, voluptatum officia fugit totam quod quasi?.';
 $mobil->cek('Yamile',$ket );
 
+$kendaraan->merk = 'BWM';
+$kendaraan->model = 'Nova';
+$kendaraan->tahun = 2023;
+$kendaraan->warna = 'putih';
+echo $kendaraan->merk;
+$kendaraan->cek('Yamile','');
